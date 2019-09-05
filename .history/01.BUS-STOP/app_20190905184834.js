@@ -6,7 +6,6 @@ function getInfo() {
         .then((info) => info.json())
         .then((data) => {
             document.getElementById('stopName').textContent = data.name;
-            document.getElementById('buses').innerHTML = '';
 
             let buses = Object.entries(data.buses);
 
@@ -15,7 +14,6 @@ function getInfo() {
                 listItem.textContent = `Bus ${busNum} arrives in ${busTime} minutes`;
                 document.getElementById('buses').appendChild(listItem);
             }
-            document.getElementById('stopId').value = '';
         })
         .catch(error => {
             document.getElementById('stopName').textContent = 'Error';

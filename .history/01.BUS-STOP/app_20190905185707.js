@@ -15,7 +15,6 @@ function getInfo() {
                 listItem.textContent = `Bus ${busNum} arrives in ${busTime} minutes`;
                 document.getElementById('buses').appendChild(listItem);
             }
-            document.getElementById('stopId').value = '';
         })
         .catch(error => {
             document.getElementById('stopName').textContent = 'Error';
