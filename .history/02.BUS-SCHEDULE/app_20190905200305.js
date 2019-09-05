@@ -11,10 +11,8 @@ function solve() {
     }
 
     function arrive() {
-        document.querySelector('span.info').textContent = `Arriving at ${currentStop.name}`;
-        currentStopId = currentStop.next;
-        document.getElementById('depart').disabled = false;
-        document.getElementById('arrive').setAttribute('disabled', true);
+        document.querySelector('span.info').textContent = `Next Stop ${currentStop.name}`;
+        currentStopId = currentStop.next
     }
 
     function loadStop(data) {

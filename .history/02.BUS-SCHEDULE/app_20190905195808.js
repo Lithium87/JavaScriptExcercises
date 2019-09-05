@@ -11,18 +11,14 @@ function solve() {
     }
 
     function arrive() {
-        document.querySelector('span.info').textContent = `Arriving at ${currentStop.name}`;
-        currentStopId = currentStop.next;
-        document.getElementById('depart').disabled = false;
-        document.getElementById('arrive').setAttribute('disabled', true);
+        console.log('Arrive TODO...');
     }
 
     function loadStop(data) {
         currentStop = data;
-        document.querySelector('span.info').textContent = `Next Stop ${currentStop.name}`;
-        currentStopId = currentStop.next
+        document.querySelector('span.info').textContent = `Next Stop ${currentStop.currentStopId = currentStop.next}`
         document.getElementById('depart').setAttribute('disabled', true);
-        document.getElementById('arrive').disabled = false;
+        document.getElementById('arrive').setAttribute('disabled', false);
     }
 
     return {
